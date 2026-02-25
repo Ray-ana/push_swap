@@ -42,6 +42,7 @@ static void	create_stack(t_stack **stack_a, char **args, int i)
 			|| ft_doublon(*stack_a, (int)val))
 		{
 			write(2, "Error\n", 6);
+			free_stack(stack_a);
 			exit(1);
 		}
 		node_back(stack_a, node_new((int)val));
